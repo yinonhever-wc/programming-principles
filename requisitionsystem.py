@@ -106,7 +106,7 @@ class RequisitionSystem:
     # There are multiple places in the code that need to generate an approval reference ID using the same formula (staff ID + last 3 digits of the requisition ID).
     # Instead of repeating this forumla several times in the code, it's put into a reusable method that can be called whenever an approval reference is needed.
 
-    # It also applies the Single Responisibility principle: the only thing it does is generating an approval ref.
+    # It also applies the Single Responsibility principle: the only thing it does is generating an approval ref.
     # This means we only need to change this method if we want to change the formula for generating an approval ref.
 
     # The KISS principle is also applied: the method is made of just one line that returns a concatenated string using the dict's properties.
@@ -187,7 +187,7 @@ class RequisitionSystem:
 
     # The start method (which operates the application's main menu) applies the KISS principle:
     # it simply asks the user for their choice, and then uses basic if-elif-else conditions to perform the right action
-    # based on the user's choice, or print an error message if the choice is invalid.
+    # based on the user's choice, or prints an error message if the choice is invalid.
     def start(self):
         while True:
             selection = input(MENU_MESSAGE)
