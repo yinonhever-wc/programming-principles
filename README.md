@@ -2,7 +2,7 @@
 
 Below are several examples of programming principles applied by the Python code of the requisition system.
 
-**KISS (keep it simple, stupid)**
+#### KISS (keep it simple, stupid)
 
 All of the class's methods, as well as the code outside the class that runs the system, are written in a simple way that makes it easy to read the code, understand it's doing, communicate between different parts of it and continue working on it in the future.
 
@@ -10,7 +10,7 @@ For example, the _\_\_init\_\__ method only has one line that's doing the simple
 
 Similarly, the _generate_approval_ref_ method has only one line that returns a simple concatenated string; the _find_requisition_by_id_ method only does a basic and simple looping through the list of requisitions, returning the matching item if it finds one; the _start_ method receives a simple input from the user and uses simple if/elif/else check to perform the appropriate actions; and the code outside the class simply creates an instance and calls the _start_ method to run the system, without doing anything else.
 
-**DRY (don't repeat yourself)**
+#### DRY (don't repeat yourself)
 
 The code is written in a way that aims to minimize repetition, so pieces of code that can or should be used in multiple places are put into reusable methods.
 
@@ -20,7 +20,7 @@ The method _find_requisition_by_id_ is also included as a potentially reusable m
 
 There can still be slight improvements to the code in terms of applying the DRY principle. For example, there's a part of four lines which is repeated in two different methods, and is responsible for checking if an approval reference ID is available and displaying it. This part could be moved into a reusable method to prevent this repetition.
 
-**Single Responsibility**
+#### Single Responsibility
 
 The code generally aims to ensure that each of the class's methods would only be doing one thing, so we'd only have to change a method if that specific functionality needs to be updated.
 
